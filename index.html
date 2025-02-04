@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators Demonstration</title>
+
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">JavaScript Operators Demonstration</h1>
+        <p class="text-center">This page demonstrates arithmetic, comparison, and logical operators. Click the buttons to see the results!</p>
+
+        <div class="row">
+            <!-- Arithmetic Operations -->
+            <div class="col-md-4">
+                <div class="card arithmetic-card">
+                    <h5 class="card-title">Arithmetic Operations</h5>
+                    <p>Click to see the result of simple arithmetic calculations.</p>
+                    <div class="btn-container">
+                        <button class="btn btn-custom" onclick="showArithmeticResult()">Show Arithmetic Result</button>
+                    </div>
+                    <p id="arithmeticResult" class="result"></p>
+                </div>
+            </div>
+
+            <!-- Comparison Operations -->
+            <div class="col-md-4">
+                <div class="card comparison-card">
+                    <h5 class="card-title">Comparison Operations</h5>
+                    <p>Click to compare two values using comparison operators.</p>
+                    <div class="btn-container">
+                        <button class="btn btn-custom" onclick="showComparisonResult()">Show Comparison Result</button>
+                    </div>
+                    <p id="comparisonResult" class="result"></p>
+                </div>
+            </div>
+
+            <!-- Logical Operations -->
+            <div class="col-md-4">
+                <div class="card logical-card">
+                    <h5 class="card-title">Logical Operations</h5>
+                    <p>Click to check the result of logical operations.</p>
+                    <div class="btn-container">
+                        <button class="btn btn-custom" onclick="showLogicalResult()">Show Logical Result</button>
+                    </div>
+                    <p id="logicalResult" class="result"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Refresh Button -->
+        <div class="text-center">
+            <button class="btn btn-refresh" onclick="refreshPage()">Refresh Page</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 JavaScript Operators Demonstration</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for operations -->
+    <script>
+        // Arithmetic Operators
+        function showArithmeticResult() {
+            let num1 = 10;
+            let num2 = 5;
+
+            let sum = num1 + num2;
+            let difference = num1 - num2;
+            let product = num1 * num2;
+            let quotient = num1 / num2;
+
+            document.getElementById("arithmeticResult").innerHTML = `Sum: ${sum}, Difference: ${difference}, Product: ${product}, Quotient: ${quotient}`;
+        }
+
+        // Comparison Operators
+        function showComparisonResult() {
+            let a = 10;
+            let b = 20;
+
+            let isEqual = a == b;
+            let isGreater = a > b;
+            let isLess = a < b;
+
+            document.getElementById("comparisonResult").innerHTML = `Is equal: ${isEqual}, Is greater: ${isGreater}, Is less: ${isLess}`;
+        }
+
+        // Logical Operators
+        function showLogicalResult() {
+            let isRaining = true;
+            let haveUmbrella = false;
+
+            let canGoOut = isRaining && haveUmbrella;
+            let willStayHome = isRaining || haveUmbrella;
+            let willNotGoOut = !isRaining;
+
+            document.getElementById("logicalResult").innerHTML = `Can go out: ${canGoOut}, Will stay home: ${willStayHome}, Will not go out: ${willNotGoOut}`;
+        }
+
+        // Refresh Page
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
